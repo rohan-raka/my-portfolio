@@ -17,12 +17,20 @@
       type="text/css"
     />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  </head>
+    <!-- animation -->
+     <!-- AOS CSS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  </head><!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
   <body>
     <!-- ** header ** -->
 
     <header class="">
-      <div class="navbar md:w-11/12 md:mx-auto bg-base-100 shadow-sm">
+<div class="navbar bg-gradient-to-r from-green-100 via-blue-100 to-purple-100 md:mx-auto bg-base-100 shadow-sm">
         <div class="flex-1">
           <div class="dropdown">
             <div tabindex="0" role="button" class="btn btn-ghost md:hidden">
@@ -45,11 +53,14 @@
               tabindex="0"
               class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
             >
-              <li><a class="text-2xl">Home</a></li>
-              <li><a class="text-2xl">My Institute</a></li>
 
-              <li><a class="text-2xl">About</a></li>
-              <li><a class="text-2xl">Contact Me</a></li>
+
+
+              <li><a class=" hover:text-green-600 transition-all text-2xl">Home</a></li>
+              <li><a class=" hover:text-green-600 transition-all text-2xl">My Institute</a></li>
+
+              <li><a class=" hover:text-green-600 transition-all text-2xl">About</a></li>
+              <li><a class=" hover:text-green-600 transition-all text-2xl">Contact Me</a></li>
               <div class=" ">
                 <a class="btn btn-success mt-2 ml-2 text-white font-bold"
                   >Login</a
@@ -61,11 +72,11 @@
         </div>
         <div class="navbar-center hidden md:flex">
           <ul class="menu menu-horizontal px-1">
-            <li><a>Home</a></li>
+            <li><a class=" hover:text-green-600 transition-all ">Home</a></li>
 
-            <li><a>About</a></li>
-            <li><a>My Institute</a></li>
-            <li><a>Contact Me</a></li>
+            <li><a class=" hover:text-green-600 transition-all " >About</a></li>
+            <li><a class=" hover:text-green-600 transition-all " >My Institute</a></li>
+            <li><a class=" hover:text-green-600 transition-all " >Contact Me</a></li>
           </ul>
         </div>
         <div class=" ">
@@ -75,209 +86,205 @@
 
       <!-- ?? Hero Section ?? -->
 
-      <div
-        class="hero  bg-[url('images/bg-1.png')] bg-cover bg-center bg-no-repeat pb-2"
-      >
-        <div class="hero-content flex-col md:flex-row-reverse gap-6">
-          <img
-            src="images/banner-1.png"
-            class="w-full md:w-80 rounded-full shadow-xl"
-          />
-          <div class="md:w-1/2 text-center md:text-start">
-            <p class="text-3xl text-gray-700">Hi!, I am</p>
-            <h1 class="text-5xl font-bold">
-              Rohan <span class="text-success">Raka</span>
-            </h1>
-            <p class="py-6">
-              I’m studying at Pabna Ideal Nursing College, one of the best
-              nursing colleges in Bangladesh. Our college is well-known for its
-              quality education, experienced teachers, and supportive learning
-              environment. I feel proud to be a part of this institution and to
-              be preparing for a career in healthcare.
-            </p>
-            <button class="btn btn-success text-white font-bold">
-              Download Resume
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941" />
-</svg>
+<div class="hero bg-[url('images/bg-1.png')] bg-cover bg-center bg-no-repeat pb-2">
+  <div class="hero-content flex-col md:flex-row-reverse gap-6">
 
-            </button>
-          </div>
-        </div>
-      </div>
+    <!-- Hero Image -->
+    <img
+      src="images/banner-1.png"
+      class="w-full md:w-80 rounded-full shadow-xl"
+      data-aos="fade-left"
+      data-aos-duration="1200"
+      data-aos-delay="200"
+    />
+
+    <!-- Hero Text Content -->
+    <div class="md:w-1/2 text-center md:text-start" data-aos="fade-right" data-aos-duration="1000">
+
+      <!-- Title Text -->
+      <p class="text-3xl text-blue-700 font-semibold"
+         data-aos="fade-down"
+         data-aos-delay="300"
+         data-aos-duration="800">
+        Hi!, I am
+      </p>
+
+      <!-- Name -->
+      <h1 class="text-5xl font-bold mb-4"
+          data-aos="zoom-in"
+          data-aos-delay="500"
+          data-aos-duration="1000">
+        Rohan <span class="text-green-500">Raka</span>
+      </h1>
+
+      <!-- Description -->
+      <p class="py-6 text-gray-800 leading-relaxed"
+         data-aos="fade-up"
+         data-aos-delay="700"
+         data-aos-duration="1200">
+        I’m studying at Pabna Ideal Nursing College, one of the best
+        nursing colleges in Bangladesh. Our college is well-known for its
+        quality education, experienced teachers, and supportive learning
+        environment. I feel proud to be a part of this institution and to
+        be preparing for a career in healthcare.
+      </p>
+
+      <!-- Button -->
+      <button class="btn btn-success text-white font-bold"
+              data-aos="zoom-in-up"
+              data-aos-delay="200"
+              data-aos-duration="200">
+        Download Resume
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+             viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 ml-2">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+
+
+
     </header>
 
     <!-- ** Main ** -->
 
     <main class="">
-      <section class="my-12 w-10/12 mx-auto py-4">
-
-<div class="flex mb-8 justify-center items-center space-x-2" > <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-10 text-orange-500 ">
-  <path fill-rule="evenodd" d="M10.5 3.798v5.02a3 3 0 0 1-.879 2.121l-2.377 2.377a9.845 9.845 0 0 1 5.091 1.013 8.315 8.315 0 0 0 5.713.636l.285-.071-3.954-3.955a3 3 0 0 1-.879-2.121v-5.02a23.614 23.614 0 0 0-3 0Zm4.5.138a.75.75 0 0 0 .093-1.495A24.837 24.837 0 0 0 12 2.25a25.048 25.048 0 0 0-3.093.191A.75.75 0 0 0 9 3.936v4.882a1.5 1.5 0 0 1-.44 1.06l-6.293 6.294c-1.62 1.621-.903 4.475 1.471 4.88 2.686.46 5.447.698 8.262.698 2.816 0 5.576-.239 8.262-.697 2.373-.406 3.092-3.26 1.47-4.881L15.44 9.879A1.5 1.5 0 0 1 15 8.818V3.936Z" clip-rule="evenodd" />
-</svg>
 
 
-  <h2 class="text-3xl font-bold text-center ">My Skills</h2></div>
-        <div
-          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8"
-        >
-          <!-- 1. Nursing -->
-          <div
-            class="card bg-gradient-to-bl from-violet-300 to-fuchsia-300 shadow-2xl"
-          >
-            <div class="card-body">
-              <h2 class="badge badge-primary text-white text-sm px-2">
-                Nursing
-              </h2>
-              <h2 class="text-lg font-bold mt-2">নার্সিংয়ে প্রতিশ্রুতি</h2>
-              <div class="md:flex items-center justify-center">
-                <p class="text-gray-700">
-                  আমি একজন নিবেদিত নার্সিং শিক্ষার্থী। রোগীসেবা, ওষুধ প্রদান ও
-                  স্বাস্থ্য পরীক্ষা কাজে আমার হাতে-কলমে অভিজ্ঞতা রয়েছে এবং
-                  মানসম্পন্ন স্বাস্থ্যসেবা দিতে আমি প্রতিশ্রুতিবদ্ধ।
-                </p>
-                <img
-                  src="icons/nursing.png"
-                  class="mx-auto rounded-full w-2/5 h-2/5 mt-6 md:mt-0"
-                  alt=""
-                />
-              </div>
-            </div>
-          </div>
 
-          <!-- 2. First Aid -->
-          <div
-            class="card bg-gradient-to-br from-orange-300 to-rose-300 shadow-2xl"
-          >
-            <div class="card-body">
-              <h2 class="badge badge-secondary text-white text-sm px-2">
-                First Aid
-              </h2>
-              <h2 class="text-lg font-bold mt-2">জরুরি সেবায় দক্ষতা</h2>
-              <div class="md:flex items-center justify-center">
-                <p class="text-gray-700">
-                  প্রাথমিক চিকিৎসা ও জরুরি সেবা প্রদানে আমি প্রশিক্ষিত। সংকটময়
-                  পরিস্থিতিতে তাৎক্ষণিক চিকিৎসা দিতে পারি, যেমন CPR, ক্ষত
-                  পরিষ্কার এবং জীবন রক্ষাকারী মৌলিক সহায়তা।
-                </p>
-                <img
-                  src="icons/first-aid.png"
-                  class="mx-auto rounded-full w-2/4 h-2/4 mt-6 md:mt-0"
-                  alt=""
-                />
-              </div>
-            </div>
-          </div>
+<section class="my-12 w-10/12 mx-auto py-4">
 
-          <!-- 3. Medical Knowledge -->
-          <div
-            class="card bg-gradient-to-br from-blue-200 to-sky-300 shadow-2xl"
-          >
-            <div class="card-body">
-              <h2 class="badge badge-warning text-white text-sm px-2">
-                Medical Knowledge
-              </h2>
-              <h2 class="text-lg font-bold mt-2">চিকিৎসা জ্ঞানে আত্মবিশ্বাস</h2>
-              <div class="md:flex items-center justify-center">
-                <p class="text-gray-700">
-                  চিকিৎসাবিষয়ক জ্ঞান রয়েছে দৃঢ় ও সুসংগঠিত ভিত্তির উপর, যার মধ্যে
-                  অ্যানাটমি, ফিজিওলজি এবং ফার্মাকোলজির স্পষ্ট ধারণা অন্তর্ভুক্ত।
-                  এ জ্ঞান রোগীর অবস্থা বিশ্লেষণ ও যথাযথ চিকিৎসা প্রদানে সহায়তা
-                  করে।
-                </p>
-                <img
-                  src="icons/medical-equipment.png"
-                  class="mx-auto rounded-full w-2/5 h-2/5 mt-2 md:mt-0"
-                  alt=""
-                />
-              </div>
-            </div>
-          </div>
+  <!-- Section Title with animation -->
+  <div class="flex mb-8 justify-center items-center space-x-2 "  data-aos="zoom-in-up"
+              data-aos-delay="200"
+              data-aos-duration="200">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-10 text-orange-500" data-aos="zoom-in-up"
+              data-aos-delay="500"
+              data-aos-duration="500">
+      <path fill-rule="evenodd" d="M10.5 3.798v5.02a3 3 0 0 1-.879 2.121l-2.377 2.377a9.845 9.845 0 0 1 5.091 1.013 8.315 8.315 0 0 0 5.713.636l.285-.071-3.954-3.955a3 3 0 0 1-.879-2.121v-5.02a23.614 23.614 0 0 0-3 0Zm4.5.138a.75.75 0 0 0 .093-1.495A24.837 24.837 0 0 0 12 2.25a25.048 25.048 0 0 0-3.093.191A.75.75 0 0 0 9 3.936v4.882a1.5 1.5 0 0 1-.44 1.06l-6.293 6.294c-1.62 1.621-.903 4.475 1.471 4.88 2.686.46 5.447.698 8.262.698 2.816 0 5.576-.239 8.262-.697 2.373-.406 3.092-3.26 1.47-4.881L15.44 9.879A1.5 1.5 0 0 1 15 8.818V3.936Z" clip-rule="evenodd" />
+    </svg>
+    <h2 class="text-3xl font-bold text-center" >My Skills</h2>
+  </div>
+<!-- AOS CSS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
-          <!-- 4. Communication -->
-          <div
-            class="card bg-gradient-to-bl from-green-300 to-teal-200 shadow-2xl"
-          >
-            <div class="card-body">
-              <h2 class="badge badge-error text-white text-sm px-2">
-                Communication
-              </h2>
-              <h2 class="text-lg font-bold mt-2">যোগাযোগ ও সহানুভূতি</h2>
-              <div class="md:flex items-center justify-center">
-                <p class="text-gray-700">
-                  স্বাস্থ্যসেবার পরিবেশে রোগী, সহকর্মী ও বন্ধুদের সঙ্গে আন্তরিক
-                  ও কার্যকর সম্পর্ক বজায় রাখতে সক্ষম। সহজভাবে কথা বলা ও
-                  সহানুভূতিশীল আচরণের মাধ্যমে বিশ্বাস অর্জন করা যায়।
-                </p>
-                <img
-                  src="icons/Communication.png"
-                  class="mx-auto rounded-bl-3xl w-2/4 h-2/5 md:mt-0"
-                  alt=""
-                />
-              </div>
-            </div>
-          </div>
+<section class="my-12 w-11/12 md:w-10/12 mx-auto py-4 overflow-x-hidden">
 
-          <!-- 5. Teamwork -->
-          <div
-            class="card bg-gradient-to-tr from-pink-200 to-purple-300 shadow-2xl"
-          >
-            <div class="card-body">
-              <h2 class="badge badge-info text-white text-sm px-2">Teamwork</h2>
-              <h2 class="text-lg font-bold mt-2">
-                বিচক্ষণতা ও দ্রুত প্রতিক্রিয়া
-              </h2>
-              <div class="md:flex items-center justify-center">
-                <p class="text-gray-700">
-                  যুক্তিভিত্তিক চিন্তাশক্তিতে দক্ষতা রয়েছে, যা রোগীর অবস্থা
-                  বিশ্লেষণ, সঠিক সিদ্ধান্ত গ্রহণ এবং উপযুক্ত চিকিৎসা প্রদানে
-                  সহায়তা করে। পরিস্থিতি মূল্যায়ন করে দ্রুত ও কার্যকরভাবে
-                  প্রতিক্রিয়া জানাতে সক্ষম।
-                </p>
-                <img
-                  src="icons/team-work.png"
-                  class="mx-auto rounded-full w-2/4 h-2/5 md:mt-0"
-                  alt=""
-                />
-              </div>
-            </div>
-          </div>
 
-          <div
-            class="card bg-gradient-to-bl from-yellow-200 to-orange-300 shadow-2xl"
-          >
-            <div class="card-body">
-              <h2
-                class="card-title badge badge-success text-white text-sm px-2"
-              >
-                Time Management
-              </h2>
-              <h2 class="card-title mt-2 font-bold">
-                দায়িত্বে ভারসাম্য ও শৃঙ্খলা
-              </h2>
-              <div class="md:flex items-center justify-center">
-                <p class="text-gray-700">
-                  শিক্ষা, প্রশিক্ষণ ও ব্যক্তিগত জীবনে সময় ব্যবস্থাপনায় দক্ষ।
-                  প্রতিটি দায়িত্ব সময়মতো সম্পন্ন করতে কাজের অগ্রাধিকার নির্ধারণে
-                  পারদর্শী।
-                </p>
-
-                <img
-                  src="icons/time.png"
-                  class="mx-auto rounded-full w-2/4 h-2/5 mt-2 md:mt-0"
-                  alt=""
-                />
-              </div>
-            </div>
-          </div>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8">
+    <!-- 1. Nursing -->
+    <div class="card bg-gradient-to-bl from-violet-300 to-fuchsia-300 shadow-2xl"
+         data-aos="fade-up" data-aos-delay="100">
+      <div class="card-body">
+        <h2 class="badge badge-primary text-white text-sm px-2">Nursing</h2>
+        <h2 class="text-lg font-bold mt-2">নার্সিংয়ে প্রতিশ্রুতি</h2>
+        <div class="md:flex items-center justify-center">
+          <p class="text-gray-700">
+           আমি একজন নিবেদিত নার্সিং শিক্ষার্থী। রোগীসেবা, ওষুধ প্রদান ও স্বাস্থ্য পরীক্ষা কাজে আমার হাতে-কলমে অভিজ্ঞতা রয়েছে এবং মানসম্পন্ন স্বাস্থ্যসেবা দিতে আমি প্রতিশ্রুতিবদ্ধ।
+          </p>
+          <img src="icons/nursing.png" class="mx-auto rounded-full w-2/5 h-2/5 my-6 md:mt-0" alt="" />
         </div>
-      </section>
+      </div>
+    </div>
+
+    <!-- 2. First Aid -->
+    <div class="card bg-gradient-to-br from-orange-300 to-rose-300 shadow-2xl"
+         data-aos="zoom-in" data-aos-delay="200">
+      <div class="card-body">
+        <h2 class="badge badge-secondary text-white text-sm px-2">First Aid</h2>
+        <h2 class="text-lg font-bold mt-2">জরুরি সেবায় দক্ষতা</h2>
+        <div class="md:flex items-center justify-center">
+          <p class="text-gray-700">
+            প্রাথমিক চিকিৎসা ও জরুরি সেবা প্রদানে আমি প্রশিক্ষিত। সংকটময় পরিস্থিতিতে তাৎক্ষণিক চিকিৎসা দিতে পারি, যেমন CPR, ক্ষত পরিষ্কার এবং জীবন রক্ষাকারী মৌলিক সহায়তা।
+          </p>
+          <img src="icons/first-aid.png" class="mx-auto rounded-full w-2/4 h-2/4 my-6 md:mt-0" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. Medical Knowledge -->
+    <div class="card bg-gradient-to-br from-blue-200 to-sky-300 shadow-2xl"
+         data-aos="fade-right" data-aos-delay="300">
+      <div class="card-body">
+        <h2 class="badge badge-warning text-white text-sm px-2">Medical Knowledge</h2>
+        <h2 class="text-lg font-bold mt-2">চিকিৎসা জ্ঞানে আত্মবিশ্বাস</h2>
+        <div class="md:flex items-center justify-center">
+          <p class="text-gray-700">
+            চিকিৎসাবিষয়ক জ্ঞান রয়েছে দৃঢ় ও সুসংগঠিত ভিত্তির উপর, যার মধ্যে অ্যানাটমি, ফিজিওলজি এবং ফার্মাকোলজির স্পষ্ট ধারণা অন্তর্ভুক্ত। এ জ্ঞান রোগীর অবস্থা বিশ্লেষণ ও যথাযথ চিকিৎসা প্রদানে সহায়তা করে।
+          </p>
+          <img src="icons/medical-equipment.png" class="mx-auto rounded-full w-2/5 h-2/5 mt-4 mb-12 md:mt-0" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. Communication -->
+    <div class="card bg-gradient-to-bl from-green-300 to-teal-200 shadow-2xl"
+         data-aos="zoom-in-up" data-aos-delay="400">
+      <div class="card-body">
+        <h2 class="badge badge-error text-white text-sm px-2">Communication</h2>
+        <h2 class="text-lg font-bold mt-2">যোগাযোগ ও সহানুভূতি</h2>
+        <div class="md:flex items-center justify-center">
+          <p class="text-gray-700">
+          স্বাস্থ্যসেবার পরিবেশে রোগী, সহকর্মী ও বন্ধুদের সঙ্গে আন্তরিক ও কার্যকর সম্পর্ক বজায় রাখতে সক্ষম। সহজভাবে কথা বলা ও সহানুভূতিশীল আচরণের মাধ্যমে বিশ্বাস অর্জন করা যায়।
+          </p>
+          <img src="icons/Communication.png" class="mx-auto rounded-full w-2/4 h-2/5 mb-12 md:mt-0" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. Teamwork -->
+    <div class="card bg-gradient-to-tr from-pink-200 to-purple-300 shadow-2xl"
+         data-aos="flip-left" data-aos-delay="500">
+      <div class="card-body">
+        <h2 class="badge badge-info text-white text-sm px-2">Teamwork</h2>
+        <h2 class="text-lg font-bold mt-2">বিচক্ষণতা ও দ্রুত প্রতিক্রিয়া</h2>
+        <div class="md:flex items-center justify-center">
+          <p class="text-gray-700">
+            যুক্তিভিত্তিক চিন্তাশক্তিতে দক্ষতা রয়েছে, যা রোগীর অবস্থা বিশ্লেষণ, সঠিক সিদ্ধান্ত গ্রহণ এবং উপযুক্ত চিকিৎসা প্রদানে সহায়তা করে। পরিস্থিতি মূল্যায়ন করে দ্রুত ও কার্যকরভাবে প্রতিক্রিয়া জানাতে সক্ষম।
+          </p>
+          <img src="icons/team-work.png" class="mx-auto rounded-full w-2/4 h-2/5 mt-6 mb-12 md:mt-0" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <!-- 6. Time Management -->
+    <div class="card bg-gradient-to-bl from-yellow-200 to-orange-300 shadow-2xl"
+         data-aos="fade-left" data-aos-delay="600">
+      <div class="card-body">
+        <h2 class="card-title badge badge-success text-white text-sm px-2">Time Management</h2>
+        <h2 class="card-title mt-2 font-bold">দায়িত্বে ভারসাম্য ও শৃঙ্খলা</h2>
+        <div class="md:flex items-center justify-center">
+          <p class="text-gray-700">
+           শিক্ষা, প্রশিক্ষণ ও ব্যক্তিগত জীবনে সময় ব্যবস্থাপনায় দক্ষ। প্রতিটি দায়িত্ব সময়মতো সম্পন্ন করতে কাজের অগ্রাধিকার নির্ধারণে পারদর্শী।
+          </p>
+          <img src="icons/time.png" class="mx-auto rounded-full w-2/4 h-2/4 my-4 md:mt-0" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+</section>
 
       <!-- ?? My Institute Section -->
 
       <section class="my-6  py-6 mx-auto">
 
-<div class="flex mb-8 justify-center items-center space-x-2" ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-10 hover:fill-orange-500">
+<div class="flex mb-8 justify-center items-center space-x-2" data-aos="zoom-in-up "
+              data-aos-delay="300"
+              data-aos-duration="300"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-10 hover:fill-orange-500 data-aos="zoom-in-up"
+              data-aos-delay="500"
+              data-aos-duration="500"">
   <path d="M11.584 2.376a.75.75 0 0 1 .832 0l9 6a.75.75 0 1 1-.832 1.248L12 3.901 3.416 9.624a.75.75 0 0 1-.832-1.248l9-6Z" />
   <path fill-rule="evenodd" d="M20.25 10.332v9.918H21a.75.75 0 0 1 0 1.5H3a.75.75 0 0 1 0-1.5h.75v-9.918a.75.75 0 0 1 .634-.74A49.109 49.109 0 0 1 12 9c2.59 0 5.134.202 7.616.592a.75.75 0 0 1 .634.74Zm-7.5 2.418a.75.75 0 0 0-1.5 0v6.75a.75.75 0 0 0 1.5 0v-6.75Zm3-.75a.75.75 0 0 1 .75.75v6.75a.75.75 0 0 1-1.5 0v-6.75a.75.75 0 0 1 .75-.75ZM9 12.75a.75.75 0 0 0-1.5 0v6.75a.75.75 0 0 0 1.5 0v-6.75Z" clip-rule="evenodd" />
   <path d="M12 7.875a1.125 1.125 0 1 0 0-2.25 1.125 1.125 0 0 0 0 2.25Z" />
@@ -290,187 +297,186 @@
 
 
         <!-- section banner start -->
-        <div
-          class="hero bg-gradient-to-r mb-5 from-indigo-100 to-indigo-300 "
-        >
-          <div class="hero-content justify-center  flex-col">
-            <img
-              src="images/gallery/pabna-ideal.jpg"
-              class="w-full rounded-lg shadow-2xl"
-            />
-            <div class="text-center">
-              <h1 class=" uppercase md:text-3xl text-2xl font-bold mt-4">Pabna Ideal Nursing College</h1>
-              <p class="py-6 md:w-4/6 mx-auto text-gray-700">
-               Pabna Ideal Nursing College is one of the top nursing colleges in Bangladesh, known for its quality education, skilled faculty, and strong clinical training. With modern facilities and a focus on both academic excellence and hands-on experience, it prepares students to become confident, compassionate healthcare professionals ready to serve locally and globally.
-              </p>
-              <button class="btn btn-secondary font-bold text-white">Get Started <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941" />
-</svg>
- </button>
+       <div class="hero bg-gradient-to-r from-purple-100 via-indigo-200 to-blue-100 py-10 px-4 mb-5 overflow-hidden" data-aos="fade-up" data-aos-duration="1000">
+  <div class="hero-content justify-center flex-col text-center max-w-4xl mx-auto">
 
-            </div>
-          </div>
-        </div>
+    <!-- Image with AOS -->
+    <img
+      src="images/gallery/pabna-ideal.jpg"
+      class="w-full rounded-xl shadow-2xl mb-6"
+      alt="Pabna Ideal Nursing College"
+      data-aos="zoom-in"
+      data-aos-duration="1000"
+    />
+
+    <!-- Heading -->
+    <h1
+      class="uppercase md:text-4xl text-2xl font-extrabold text-indigo-800 tracking-wide mb-2"
+      data-aos="fade-down"
+      data-aos-delay="100"
+    >
+      Pabna Ideal Nursing College
+    </h1>
+
+    <!-- Description -->
+    <p
+      class="py-2 md:w-4/5 mx-auto text-gray-800 leading-relaxed text-[17px]"
+      data-aos="fade-up"
+      data-aos-delay="200"
+    >
+      Pabna Ideal Nursing College is one of the top nursing colleges in Bangladesh, known for its quality education, skilled faculty, and strong clinical training. With modern facilities and a focus on both academic excellence and hands-on experience, it prepares students to become confident, compassionate healthcare professionals ready to serve locally and globally.
+    </p>
+
+    <!-- Button -->
+    <button
+      class="btn btn-success text-white font-bold mt-2"
+      data-aos="zoom-in-up"
+      data-aos-delay="300"
+    >
+      Get Started
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+           viewBox="0 0 24 24" stroke-width="1.5"
+           stroke="currentColor" class="size-6 ml-2">
+        <path stroke-linecap="round" stroke-linejoin="round"
+              d="M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941"/>
+      </svg>
+    </button>
+  </div>
+</div>
+
         <!-- section banner end -->
+<!-- AOS CSS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
-        <!-- why i study in this college -->
+<div class="w-10/12 mx-auto my-12">
+  <h2 class="text-xl md:text-3xl font-bold text-center text-blue-800 my-8" data-aos="fade-up" data-aos-delay="100">
+    আমি কেন পাবনা আইডিয়াল নার্সিং কলেজে পড়ি?
+  </h2>
 
-        <div class="w-10/12 mx-auto my-12">
-
-          <h2 class=" text-2l md:text-2xl font-bold text-center my-6">আমি কেন পাবনা আইডিয়াল নার্সিং কলেজে পড়ি?</h2>
-          <!-- Accordion 1 (Closed by default) -->
-
-<!-- Accordion 1 -->
-<div class="collapse collapse-arrow bg-base-100 border border-base-300 mb-2">
-  <input type="checkbox" />
-  <div class="collapse-title text-green-600 text-xl font-semibold">
-    ১. এখানে পড়লে ভবিষ্যতে ক্যারিয়ার গড়ার সুযোগ কেমন?
+  <!-- Accordion 1 -->
+  <div class="collapse collapse-arrow bg-white border border-gray-300 mb-3 shadow-md rounded-lg" data-aos="fade-up" data-aos-delay="100">
+    <input type="checkbox" />
+    <div class="collapse-title text-green-700 text-xl font-semibold">
+      ১. এখানে পড়লে ভবিষ্যতে ক্যারিয়ার গড়ার সুযোগ কেমন?
+    </div>
+    <div class="collapse-content text-gray-700 text-base leading-relaxed">
+      এই কলেজের স্নাতকরা দেশ-বিদেশের স্বনামধন্য হাসপাতাল ও স্বাস্থ্য প্রতিষ্ঠানে কাজ করার সুযোগ পাচ্ছেন। কলেজটির পড়াশোনার মান ও প্রশিক্ষণ আন্তর্জাতিক মানসম্পন্ন হওয়ায় শিক্ষার্থীরা বিদেশে নার্স হিসেবে চাকরি পাওয়ার জন্য প্রস্তুত হয়ে ওঠে। বিসিএস নার্সিং সহ অন্যান্য সরকারি ও বেসরকারি চাকরির ক্ষেত্রে এখানকার শিক্ষার্থীরা বরাবরই ভালো করছে।
+    </div>
   </div>
-  <div class="collapse-content text-gray-800 text-base">
-    এই কলেজের স্নাতকরা দেশ-বিদেশের স্বনামধন্য হাসপাতাল ও স্বাস্থ্য প্রতিষ্ঠানে কাজ করার সুযোগ পাচ্ছেন। কলেজটির পড়াশোনার মান ও প্রশিক্ষণ আন্তর্জাতিক মানসম্পন্ন হওয়ায় শিক্ষার্থীরা বিদেশে নার্স হিসেবে চাকরি পাওয়ার জন্য প্রস্তুত হয়ে ওঠে। বিসিএস নার্সিং সহ অন্যান্য সরকারি ও বেসরকারি চাকরির ক্ষেত্রে এখানকার শিক্ষার্থীরা বরাবরই ভালো করছে।
+
+  <!-- Accordion 2 -->
+  <div class="collapse collapse-arrow bg-white border border-gray-300 mb-3 shadow-md rounded-lg" data-aos="fade-up" data-aos-delay="150">
+    <input type="checkbox" />
+    <div class="collapse-title text-green-700 text-xl font-semibold">
+      ২. এই কলেজে শিক্ষার পাশাপাশি আরও কী ধরনের সুযোগ-সুবিধা রয়েছে?
+    </div>
+    <div class="collapse-content text-gray-700 text-base leading-relaxed">
+      পাবনা আইডিয়াল নার্সিং কলেজে রয়েছে আধুনিক শ্রেণিকক্ষ, ল্যাব, লাইব্রেরি, কম্পিউটার সুবিধা, এবং স্বাস্থ্যসম্মত আবাসন ব্যবস্থা। পাশাপাশি, শিক্ষার্থীদের মানসিক উন্নয়ন ও নেতৃত্ব গঠনের জন্য রয়েছে বিভিন্ন সহশিক্ষা কার্যক্রম, বিতর্ক ক্লাব, স্বাস্থ্য সচেতনতা ক্যাম্প এবং কমিউনিটি হেলথ প্রজেক্ট।
+    </div>
+  </div>
+
+  <!-- Accordion 3 -->
+  <div class="collapse collapse-arrow bg-white border border-gray-300 mb-3 shadow-md rounded-lg" data-aos="fade-up" data-aos-delay="200">
+    <input type="checkbox" />
+    <div class="collapse-title text-green-700 text-xl font-semibold">
+      ৩. কেনো পাবনা আইডিয়াল নার্সিং কলেজকে বেছে নেবো অন্যান্য কলেজের তুলনায়?
+    </div>
+    <div class="collapse-content text-gray-700 text-base leading-relaxed">
+      পাবনা আইডিয়াল নার্সিং কলেজ শিক্ষার মান, ক্লিনিক্যাল প্রশিক্ষণ এবং দক্ষ শিক্ষকগণের দিক থেকে অনন্য। এখানে ছাত্রছাত্রীরা শুধু বইয়ের জ্ঞানই নয়, বাস্তবিক অভিজ্ঞতার মধ্য দিয়ে একজন পরিপূর্ণ নার্স হিসেবে গড়ে ওঠে। কলেজটি নিয়মিতভাবে হাসপাতালে ইন্টার্নশিপ, সেমিনার ও ও
+    </div>
   </div>
 </div>
-
-<!-- Accordion 2 -->
-<div class="collapse collapse-arrow bg-base-100 border border-base-300 mb-2">
-  <input type="checkbox" />
-  <div class="collapse-title text-green-600 text-xl font-semibold">
-    ২. এই কলেজে শিক্ষার পাশাপাশি আরও কী ধরনের সুযোগ-সুবিধা রয়েছে?
-  </div>
-  <div class="collapse-content text-gray-800 text-base">
-    পাবনা আইডিয়াল নার্সিং কলেজে রয়েছে আধুনিক শ্রেণিকক্ষ, ল্যাব, লাইব্রেরি, কম্পিউটার সুবিধা, এবং স্বাস্থ্যসম্মত আবাসন ব্যবস্থা। পাশাপাশি, শিক্ষার্থীদের মানসিক উন্নয়ন ও নেতৃত্ব গঠনের জন্য রয়েছে বিভিন্ন সহশিক্ষা কার্যক্রম, বিতর্ক ক্লাব, স্বাস্থ্য সচেতনতা ক্যাম্প এবং কমিউনিটি হেলথ প্রজেক্ট।
-  </div>
-</div>
-
-<!-- Accordion 3 -->
-<div class="collapse collapse-arrow bg-base-100 border border-base-300 mb-2">
-  <input type="checkbox" />
-  <div class="collapse-title text-green-600 text-xl font-semibold">
-    ৩. কেনো পাবনা আইডিয়াল নার্সিং কলেজকে বেছে নেবো অন্যান্য কলেজের তুলনায়?
-  </div>
-  <div class="collapse-content text-gray-800 text-base">
-    পাবনা আইডিয়াল নার্সিং কলেজ শিক্ষার মান, ক্লিনিক্যাল প্রশিক্ষণ এবং দক্ষ শিক্ষকগণের দিক থেকে অনন্য। এখানে ছাত্রছাত্রীরা শুধু বইয়ের জ্ঞানই নয়, বাস্তবিক অভিজ্ঞতার মধ্য দিয়ে একজন পরিপূর্ণ নার্স হিসেবে গড়ে ওঠে। কলেজটি নিয়মিতভাবে হাসপাতালে ইন্টার্নশিপ, সেমিনার ও ও
-
 
       </section>
 
       <!-- ?? My Education Timeline Section -->
-<section class="my-6  w-10/12 mx-auto py-4">
-
-<div class="flex mb-8 justify-center items-center space-x-2" >
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-10 text-orange-500">
-  <path fill-rule="evenodd" d="M15.22 6.268a.75.75 0 0 1 .968-.431l5.942 2.28a.75.75 0 0 1 .431.97l-2.28 5.94a.75.75 0 1 1-1.4-.537l1.63-4.251-1.086.484a11.2 11.2 0 0 0-5.45 5.173.75.75 0 0 1-1.199.19L9 12.312l-6.22 6.22a.75.75 0 0 1-1.06-1.061l6.75-6.75a.75.75 0 0 1 1.06 0l3.606 3.606a12.695 12.695 0 0 1 5.68-4.974l1.086-.483-4.251-1.632a.75.75 0 0 1-.432-.97Z" clip-rule="evenodd" />
-</svg>
 
 
-  <h2 class="md:text-3xl text-xl  font-bold text-center ">My Past And Future Life</h2></div>
+<section class="my-12 w-11/12 mx-auto py-6 overflow-x-hidden bg-white  ">
 
-<div class=" flex  md:justify-center mx-auto " >
-<ul class="timeline timeline-vertical lg:timeline-horizontal">
-  <!-- 1984 -->
-  <li>
-    <div class="timeline-start text-purple-600 font-bold">2014</div>
-    <div class="timeline-middle bg-purple-600 text-white p-2 rounded-full shadow-md">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
-        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
-      </svg>
-    </div>
-    <div class="timeline-end timeline-box bg-purple-100 border-l-4 border-purple-500 text-purple-800 shadow">
-🌱 1. Early School Days
-    </div>
-    <hr class="bg-purple-400 h-1" />
-  </li>
-
-  <!-- 1998 -->
-  <li>
-    <hr class="bg-red-400 h-1" />
-    <div class="timeline-start text-red-600 font-bold">2020</div>
-    <div class="timeline-middle bg-red-600 text-white p-2 rounded-full shadow-md">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
-        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
-      </svg>
-    </div>
-    <div class="timeline-end timeline-box bg-red-100 border-l-4 border-red-500 text-red-800 shadow">
-    📘 2. High School Journey
-    </div>
-    <hr class="bg-red-400 h-1" />
-  </li>
-
-  <!-- 2001 -->
-  <li>
-    <hr class="bg-blue-400 h-1" />
-    <div class="timeline-start text-blue-600 font-bold">2022</div>
-    <div class="timeline-middle bg-blue-600 text-white p-2 rounded-full shadow-md">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
-        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
-      </svg>
-    </div>
-    <div class="timeline-end timeline-box bg-blue-100 border-l-4 border-blue-500 text-blue-800 shadow">
-     🎓 3. College Life & HSC Years
-    </div>
-    <hr class="bg-blue-400 h-1" />
-  </li>
-
-  <!-- 2007 -->
-  <li>
-    <hr class="bg-green-400 h-1" />
-    <div class="timeline-start text-green-600 font-bold">2023</div>
-    <div class="timeline-middle bg-green-600 text-white p-2 rounded-full shadow-md">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
-        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
-      </svg>
-    </div>
-    <div class="timeline-end timeline-box bg-green-100 border-l-4 border-green-500 text-green-800 shadow">
-     🩺 4. Beginning of Nursing Education
-    </div>
-    <hr class="bg-green-400 h-1" />
-  </li>
-
-  <!-- 2015 -->
-  <li>
-    <hr class="bg-yellow-400 h-1" />
-    <div class="timeline-start text-yellow-600 font-bold">2025</div>
-    <div class="timeline-middle bg-yellow-500 text-white p-2 rounded-full shadow-md">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
-        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
-      </svg>
-    </div>
-    <div class="timeline-end timeline-box bg-yellow-100 border-l-4 border-yellow-500 text-yellow-800 shadow">
-     🏥 5. Clinical Practice & Internship
-    </div>
-  </li>
-
-
-
-  <!-- 2015 -->
-  <li>
-  <hr class="bg-teal-400 h-1" />
-  <div class="timeline-start text-teal-600 font-bold">Currently</div>
-  <div class="timeline-middle bg-teal-600 text-white p-2 rounded-full shadow-md">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
-      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+  <!-- Section Title -->
+  <div class="flex mb-10 justify-center items-center space-x-3" data-aos="zoom-in-up"
+              data-aos-delay="300"
+              data-aos-duration="300">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="size-10 text-orange-500" viewBox="0 0 24 24" data-aos="zoom-in-up"
+              data-aos-delay="700"
+              data-aos-duration="700" >
+      <path fill-rule="evenodd" d="M15.22 6.268a.75.75 0 0 1 .968-.431l5.942 2.28a.75.75 0 0 1 .431.97l-2.28 5.94a.75.75 0 1 1-1.4-.537l1.63-4.251-1.086.484a11.2 11.2 0 0 0-5.45 5.173.75.75 0 0 1-1.199.19L9 12.312l-6.22 6.22a.75.75 0 0 1-1.06-1.061l6.75-6.75a.75.75 0 0 1 1.06 0l3.606 3.606a12.695 12.695 0 0 1 5.68-4.974l1.086-.483-4.251-1.632a.75.75 0 0 1-.432-.97Z" clip-rule="evenodd" />
     </svg>
+    <h2 class="md:text-3xl text-xl font-bold text-center text-gray-800">My Past And Future Life</h2>
   </div>
-  <div class="timeline-end timeline-box bg-teal-100 border-l-4 border-teal-500 text-teal-800 shadow">
-    💡 6. Future Goals & Aspirations
+
+  <!-- Timeline Container -->
+  <div class="w-full overflow-x-hidden">
+    <ul class="timeline timeline-vertical lg:timeline-horizontal max-w-full">
+
+      <!-- Timeline Item 1 -->
+      <li data-aos="fade-up" data-aos-delay="200">
+        <div class="timeline-start text-purple-600 font-bold">2014</div>
+        <div class="timeline-middle bg-purple-600 text-white p-2 rounded-full shadow-md">✅</div>
+        <div class="timeline-end timeline-box bg-purple-100 border-l-4 border-purple-500 text-purple-800 shadow">
+          🌱 Early School Days
+        </div>
+        <hr class="bg-purple-400 h-1" />
+      </li>
+
+      <!-- Timeline Item 2 -->
+      <li data-aos="fade-up" data-aos-delay="400">
+        <hr class="bg-red-400 h-1" />
+        <div class="timeline-start text-red-600 font-bold">2020</div>
+        <div class="timeline-middle bg-red-600 text-white p-2 rounded-full shadow-md">📘</div>
+        <div class="timeline-end timeline-box bg-red-100 border-l-4 border-red-500 text-red-800 shadow">
+          📘 High School Journey
+        </div>
+        <hr class="bg-red-400 h-1" />
+      </li>
+
+      <!-- Timeline Item 3 -->
+      <li data-aos="fade-up" data-aos-delay="400">
+        <hr class="bg-blue-400 h-1" />
+        <div class="timeline-start text-blue-600 font-bold">2022</div>
+        <div class="timeline-middle bg-blue-600 text-white p-2 rounded-full shadow-md">📚</div>
+        <div class="timeline-end timeline-box bg-blue-100 border-l-4 border-blue-500 text-blue-800 shadow">
+          🎓 College Life & HSC
+        </div>
+        <hr class="bg-blue-400 h-1" />
+      </li>
+
+      <!-- Timeline Item 4 -->
+      <li data-aos="fade-up" data-aos-delay="400">
+        <hr class="bg-green-400 h-1" />
+        <div class="timeline-start text-green-600 font-bold">2023</div>
+        <div class="timeline-middle bg-green-600 text-white p-2 rounded-full shadow-md">🩺</div>
+        <div class="timeline-end timeline-box bg-green-100 border-l-4 border-green-500 text-green-800 shadow">
+          🩺 Started Nursing Education
+        </div>
+        <hr class="bg-green-400 h-1" />
+      </li>
+
+      <!-- Timeline Item 5 -->
+      <li data-aos="fade-up" data-aos-delay="500">
+        <hr class="bg-yellow-400 h-1" />
+        <div class="timeline-start text-yellow-600 font-bold">2025</div>
+        <div class="timeline-middle bg-yellow-500 text-white p-2 rounded-full shadow-md">🏥</div>
+        <div class="timeline-end timeline-box bg-yellow-100 border-l-4 border-yellow-500 text-yellow-800 shadow">
+          🏥 Clinical Practice
+        </div>
+      </li>
+
+      <!-- Timeline Item 6 -->
+      <li data-aos="fade-up" data-aos-delay="500">
+        <hr class="bg-teal-400 h-1" />
+        <div class="timeline-start text-teal-600 font-bold">Currently</div>
+        <div class="timeline-middle bg-teal-600 text-white p-2 rounded-full shadow-md">🚀</div>
+        <div class="timeline-end timeline-box bg-teal-100 border-l-4 border-teal-500 text-teal-800 shadow">
+          💡 Planning My Future
+        </div>
+      </li>
+
+    </ul>
   </div>
-</li>
+</section>
 
-
-
-
-
-</ul>
-
-</div>
-
-
-
-
-
-
-
-      </section>
 
 
 
