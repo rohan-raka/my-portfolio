@@ -1,0 +1,34 @@
+.resume-button {
+  background-color: #00d084 !important;
+  color: #fff !important;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.resume-button:hover {
+  background-color: #00b374 !important;
+}
+
+
+.btn-get-start {
+  background-color: #00d084;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.btn-get-start {
+  background-color: #00b374;
+  transform: translateY(-2px);
+}
