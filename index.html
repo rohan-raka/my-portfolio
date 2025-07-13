@@ -1276,25 +1276,52 @@
   <p class="text-xs text-center">Developed by <span class="font-semibold text-orange-500 underline" onclick="moreInfoModal.showModal()">Akash Pk</span></p>
 
   <!-- More Info Button -->
-  <button class="btn btn-sm bg-primary text-white hover:bg-primary-focus transition-all" onclick="moreInfoModal.showModal()">More Info</button>
-  
+  <button class="btn btn-lg bg-primary text-white hover:bg-primary-focus transition-all" onclick="moreInfoModal.showModal()">More Info</button>
+
+
 <a href="#home" class="flex items-center gap-1 text-sm text-blue-600 hover:underline hover:text-blue-800 transition-all">
   <span>Go To Top</span>
   <i class="fa-solid fa-arrow-up"></i>
 </a>
 
-  <!-- DaisyUI Modal -->
-  <dialog id="moreInfoModal" class="modal">
-    <form method="dialog" class="modal-box">
-      <h3 class="font-bold text-lg">More Information</h3>
-      <p class="py-4 text-sm text-gray-600">
-        This site is proudly created by Rohan Raka and developed by Akash Pk using modern web tools and design.
-      </p>
-      <div class="modal-action">
-        <button class="btn btn-sm">Close</button>
-      </div>
-    </form>
-  </dialog>
+
+<!-- Modal -->
+<dialog id="moreInfoModal" class="modal  backdrop-blur-sm">
+  <form method="dialog" class="modal-box max-w-md bg-white shadow-lg rounded-lg text-center">
+
+    <!-- Profile Image -->
+    <img src="images/akash-pk-smile.jpg" alt="Akash PK" class="w-32 h-32 rounded-full mx-auto border-4 border-primary shadow-md mb-4" />
+
+    <!-- Name -->
+    <h2 class="text-2xl font-bold text-gray-800">Akash PK</h2>
+
+    <!-- Title -->
+    <p class="text-primary text-sm font-medium mb-4">MERN Stack Developer</p>
+
+    <!-- Description -->
+    <p class="text-gray-600 text-sm mb-4 px-4">
+      Professional MERN stack developer since 2021, building full-stack web apps with MongoDB, Express.js, React, and Node.js.
+      <br />
+      Working towards turning my dream of launching a software startup into reality — very soon, InshaAllah.
+    </p>
+
+    <!-- Social Icons -->
+    <div class="flex justify-center gap-4 mt-4 text-2xl">
+      <a href="https://facebook.com/yourusername" target="_blank" class="text-blue-600 hover:scale-110 transition"><i class="fab fa-facebook"></i></a>
+      <a href="https://linkedin.com/in/yourusername" target="_blank" class="text-blue-700 hover:scale-110 transition"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/yourusername" target="_blank" class="text-gray-800 hover:scale-110 transition"><i class="fab fa-github"></i></a>
+      <a href="https://wa.me/yourwhatsapplink" target="_blank" class="text-green-500 hover:scale-110 transition"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://m.me/yourmessengerlink" target="_blank" class="text-blue-500 hover:scale-110 transition"><i class="fab fa-facebook-messenger"></i></a>
+    </div>
+
+    <!-- Close Button -->
+    <div class="modal-action justify-center mt-6">
+      <button class="btn btn-sm btn-outline">Close</button>
+    </div>
+
+  </form>
+</dialog>
+
 </footer>
 
 
