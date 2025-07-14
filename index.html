@@ -4,6 +4,11 @@
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Rohan Raka - Welcome to my Portfolio</title>
+
+      <!-- google fonts -->
+ <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Dancing+Script:wght@700&family=Hind+Siliguri:wght@400&family=Saira:wght@400&display=swap" rel="stylesheet">
+
+
       <link
          rel="icon"
          type="image/x-icon"
@@ -26,9 +31,22 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+
 <style>
    html, body {
   overflow-x: hidden;
+  font-family: 'Hind Siliguri', 'Saira', sans-serif;
+  font-weight: 400;
+  color: #1f2937;
+}
+.navbar-brand {
+  font-family: 'Dancing Script', cursive;
+  font-weight: 700
+}
+.hero-title {
+  font-family: 'Archivo Black', sans-serif;
+  font-weight: 600;
+  color: #111;
 }
 
 
@@ -88,7 +106,7 @@
           <li><a class="btn btn-success text-white w-full mt-2 py-2 text-base font-semibold">Login</a></li>
         </ul>
       </div>
-      <a href="home" class="btn btn-ghost normal-case text-xl font-bold">Rohan Raka</a>
+     <a href="#home" class=" normal-case navbar-brand text-xl ">Rohan Raka</a>
     </div>
 
     <!-- Desktop Menu -->
@@ -108,7 +126,7 @@
   </div>
 
   <!-- ✅ Hero Section -->
-  <div class="hero min-h-screen relative bg-[url('images/bg-1.png')] bg-cover bg-center bg-no-repeat pt-24 pb-6">
+  <div class="hero relative bg-[url('images/bg-1.png')] bg-cover bg-center bg-no-repeat pt-24 pb-6">
     <!-- Particle Background -->
     <div id="particles-js" class="absolute top-0 left-0 w-full h-full z-0"></div>
 
@@ -119,8 +137,8 @@
 
       <!-- Text -->
       <div class="text-center md:text-left md:w-1/2">
-        <p class="text-3xl text-blue-700 font-semibold">Hi! I am</p>
-        <h1 class="text-5xl font-bold mb-4">Rohan <span class="text-green-500">Raka</span></h1>
+        <p class="text-3xl text-white md:text-blue-700 font-semibold">Hi! I am</p>
+        <h1 class=" text-4xl md:text-5xl font-bold hero-title mb-4">ROHAN <span class="text-green-500">RAKA</span></h1>
         <p class="py-4 text-gray-800 leading-relaxed">
           I’m studying at Pabna Ideal Nursing College, one of the best nursing colleges in Bangladesh.
           Known for quality education, skilled faculty, and supportive environment, I feel proud to be preparing for a career in healthcare.
@@ -1319,7 +1337,7 @@ July 13, 2025
   <p class="text-sm text-center">Developed by <span class="font-semibold text-orange-500 underline" onclick="moreInfoModal.showModal()">Akash Pk</span></p>
 
   <!-- More Info Button -->
-  <button class="btn btn-lg bg-primary text-white hover:bg-primary-focus transition-all" onclick="moreInfoModal.showModal()">More Info</button>
+  <button class="btn btn-lg bg-primary text-white hover:bg-primary-focus transition-all" onclick="moreInfoModal.showModal()">More Info <i class="fa-solid fa-circle-info text-xl"></i> </button>
 
 
 <a href="#home" class="flex items-center gap-1 text-sm text-blue-600 hover:underline hover:text-blue-800 transition-all">
@@ -1333,7 +1351,7 @@ July 13, 2025
   <form method="dialog" class="modal-box max-w-md bg-white shadow-lg rounded-lg text-center">
 
     <!-- Profile Image -->
-    <img src="images/akash-pk-smile.jpg" alt="Akash PK" class="w-32 h-32 rounded-full mx-auto border-4 border-primary shadow-md mb-4" />
+    <img src="images/akash-pk-smile.jpg" alt="Akash PK" class="w-60 h-60 rounded-full mx-auto border-4 border-primary shadow-md mb-4" />
 
     <!-- Name -->
     <h2 class="text-2xl font-bold text-gray-800">Akash PK</h2>
@@ -1347,7 +1365,6 @@ July 13, 2025
       <br />
       Working towards turning my dream of launching a software startup into reality — very soon, InshaAllah.
     </p>
-
     <!-- Social Icons -->
     <div class="flex justify-center gap-4 mt-4 text-2xl">
       <a href="https://www.facebook.com/atapk41/" target="_blank" class="text-blue-600 hover:scale-110 transition"><i class="fab fa-facebook">
@@ -1369,7 +1386,7 @@ July 13, 2025
 
     <!-- Close Button -->
     <div class="modal-action justify-center mt-6">
-      <button class="btn btn-sm btn-outline">Close</button>
+      <button class="btn btn-sm btn-outline border-2 border-primary">Close</button>
     </div>
 
   </form>
