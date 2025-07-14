@@ -68,6 +68,40 @@
       .swiper-fade .swiper-slide {
         transition: opacity 0.5s ease-in-out;
       }
+
+ /* phone mockup */
+   .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* 🔁 Auto scroll effect */
+  @keyframes autoScroll {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-3900px); } /* 650 x 6 images */
+  }
+
+  #scrollArea {
+    animation: autoScroll 60s linear infinite;
+  }
+
+  /* ✨ Shine animation */
+  @keyframes shine {
+    0% {
+      transform: translateX(-100%) rotate(12deg);
+    }
+    100% {
+      transform: translateX(200%) rotate(12deg);
+    }
+  }
+
+  .animate-shine {
+    animation: shine 4s infinite ease-in-out;
+  }
+
     </style>
 <!-- font awsome  -->
  <script src="https://kit.fontawesome.com/c27dbe26d1.js" crossorigin="anonymous"></script>
@@ -1336,7 +1370,49 @@ July 13, 2025
 
   </div>
 </section>
+<!-- mockup phone section -->
+<section class="py-16  bg-gradient-to-brbg-gradient-to-br from-blue-100 to-purple-300" id="mockup-phone">
 
+  <div class=" flex items-center justify-center  p-4">
+
+    <!-- 🔥 Phone Mockup -->
+    <div class="relative w-[320px] h-[650px] rounded-[50px] bg-primary p-[4px] shadow-[10px_10px_30px_rgba(0,0,0,0.3)] overflow-hidden transition-transform hover:scale-[1.015] duration-500 ease-in-out">
+
+      <!-- ✨ Shine/glass highlight -->
+      <div class="absolute inset-0 z-30 pointer-events-none">
+        <div class="absolute -top-1/3 -left-1/3 w-full h-full bg-white opacity-[0.08] rotate-12 blur-lg animate-shine"></div>
+      </div>
+
+      <!-- 🔲 Inner Black Bezel -->
+      <div class="w-full h-full rounded-[45px] bg-black p-[3px] relative overflow-hidden">
+
+        <!-- 📱 Dynamic Island (realistic like iPhone) -->
+        <div class="absolute top-5 left-1/2 -translate-x-1/2 w-[92px] h-[28px] bg-black/90 rounded-[20px] z-20 backdrop-blur-sm shadow-md ring-1 ring-white/5"></div>
+
+        <!-- 🖼️ Screen Content -->
+        <div class="h-full w-full rounded-[40px] bg-black overflow-y-scroll scroll-snap-y snap-mandatory no-scrollbar">
+          <!-- 6 Carousel Images -->
+          <img src="images/carousel/carousel-1.jpg" class="w-full h-[650px] object-cover snap-start" />
+          <img src="images/carousel/carousel-2.jpg" class="w-full h-[650px] object-cover snap-start" />
+          <img src="images/carousel/carousel-3.jpg" class="w-full h-[650px] object-cover snap-start" />
+          <img src="images/carousel/carousel-4.jpg" class="w-full h-[650px] object-cover snap-start" />
+          <img src="images/carousel/carousel-5.jpg" class="w-full h-[650px] object-cover snap-start" />
+          <img src="images/carousel/carousel-6.jpg" class="w-full h-[650px] object-cover snap-start" />
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+  </div>
+<div class="flex items-center justify-center gap-0 my-4">
+  <p class=" font-bold text-center">Stay tuned. The best is yet to come..🚀</p>
+  <img src="images/smile.webp" class="w-8 h-8 object-contain" alt="Smile" />
+</div>
+
+</section>
 
          </main>
 
@@ -1345,7 +1421,7 @@ July 13, 2025
 
          <!-- ** Footer ** -->
       <!-- Footer Section -->
-<footer class="bg-base-200 text-base-content p-6 text-sm flex flex-col items-center space-y-3">
+<footer class="bg-base-300 border-t-orange-100 text-base-content p-6 text-sm flex flex-col items-center space-y-3">
   <!-- Copyright -->
   <div class="flex items-center space-x-1 text-sm">
     <span>&copy; 2025</span>
