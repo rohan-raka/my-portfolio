@@ -62,51 +62,36 @@
    <body>
 
     <!-- ** header ** -->
-<header id="home">
+     <header id="home" class="relative">
+  <!-- ✅ Navbar -->
   <div class="navbar fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-white/30 shadow-sm">
     <div class="navbar-start">
       <!-- Mobile menu button -->
       <div class="dropdown">
         <div tabindex="0" role="button" class="btn btn-ghost md:hidden">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
-            viewBox="0 0 24 24" stroke="currentColor">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
               d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         </div>
-<!-- ✅ Mobile Dropdown Menu (Fully Fixed) -->
-<ul tabindex="0"
-  class="menu menu-lg dropdown-content mt-3 z-[999] px-4 py-3 space-y-1 shadow
-         bg-[rgba(255,255,255,0.85)] backdrop-blur-md rounded-xl w-60
-         text-black font-medium text-base isolation-auto">
 
-  <li>
-    <a class="hover:text-green-600 transition duration-200 py-2 px-3 rounded-md" href="#home">Home</a>
-  </li>
-  <li>
-    <a class="hover:text-green-600 transition duration-200 py-2 px-3 rounded-md" href="#institute">My Institute</a>
-  </li>
-  <li>
-    <a class="hover:text-green-600 transition duration-200 py-2 px-3 rounded-md" href="#gallery">Gallery</a>
-  </li>
-  <li>
-    <a class="hover:text-green-600 transition duration-200 py-2 px-3 rounded-md" href="#blogs">Blogs</a>
-  </li>
-  <li>
-    <a class="hover:text-green-600 transition duration-200 py-2 px-3 rounded-md" href="#contact">Contact Me</a>
-  </li>
-
-  <li>
-    <a class="btn btn-success text-white w-full mt-2 py-2 text-base font-semibold">Login</a>
-  </li>
-</ul>
-
-
+        <!-- ✅ Mobile Dropdown Menu -->
+        <ul tabindex="0"
+          class="menu menu-lg dropdown-content mt-3 z-[999] px-4 py-1 space-y-1 shadow
+                 bg-[rgba(253,255,254,0.95)] backdrop-blur-md rounded-xl w-60
+                 text-black font-medium text-base isolation-auto">
+          <li><a class="hover:text-green-600 transition duration-200 py-2 px-3 rounded-md" href="#home">Home</a></li>
+          <li><a class="hover:text-green-600 transition duration-200 py-2 px-3 rounded-md" href="#institute">My Institute</a></li>
+          <li><a class="hover:text-green-600 transition duration-200 py-2 px-3 rounded-md" href="#gallery">Gallery</a></li>
+          <li><a class="hover:text-green-600 transition duration-200 py-2 px-3 rounded-md" href="#blogs">Blogs</a></li>
+          <li><a class="hover:text-green-600 transition duration-200 py-2 px-3 rounded-md" href="#contact">Contact Me</a></li>
+          <li><a class="btn btn-success text-white w-full mt-2 py-2 text-base font-semibold">Login</a></li>
+        </ul>
       </div>
-      <a class="btn btn-ghost normal-case text-xl font-bold">Rohan Raka</a>
+      <a href="home" class="btn btn-ghost normal-case text-xl font-bold">Rohan Raka</a>
     </div>
 
-    <!-- Desktop menu -->
+    <!-- Desktop Menu -->
     <div class="navbar-center hidden md:flex">
       <ul class="menu menu-horizontal px-1 text-lg font-medium">
         <li><a class="hover:text-green-600 transition duration-300" href="#institute">My Institute</a></li>
@@ -116,11 +101,79 @@
       </ul>
     </div>
 
-    <!-- Desktop Login -->
+    <!-- Login Button Desktop -->
     <div class="navbar-end hidden lg:flex">
       <a class="btn btn-success text-white font-bold">Login</a>
     </div>
   </div>
+
+  <!-- ✅ Hero Section -->
+  <div class="hero min-h-screen relative bg-[url('images/bg-1.png')] bg-cover bg-center bg-no-repeat pt-24 pb-6">
+    <!-- Particle Background -->
+    <div id="particles-js" class="absolute top-0 left-0 w-full h-full z-0"></div>
+
+    <!-- Hero Content -->
+    <div class="hero-content relative z-10 flex-col md:flex-row-reverse gap-8">
+      <!-- Image -->
+      <img src="images/banner-1.png" class="w-full max-w-xs md:max-w-sm rounded-full shadow-lg" />
+
+      <!-- Text -->
+      <div class="text-center md:text-left md:w-1/2">
+        <p class="text-3xl text-blue-700 font-semibold">Hi! I am</p>
+        <h1 class="text-5xl font-bold mb-4">Rohan <span class="text-green-500">Raka</span></h1>
+        <p class="py-4 text-gray-800 leading-relaxed">
+          I’m studying at Pabna Ideal Nursing College, one of the best nursing colleges in Bangladesh.
+          Known for quality education, skilled faculty, and supportive environment, I feel proud to be preparing for a career in healthcare.
+        </p>
+        <button class="btn btn-success text-white font-bold mt-2">
+          Download Resume
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M2.25 18L9 11.25l4.306 4.306a11.95 11.95 0 015.814-5.518l2.74-1.22m0 0L15.22 6.75m5.94 2.28L18.88 15" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ✅ Particles.js Script -->
+  <script>
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 80, density: { enable: true, value_area: 800 } },
+        color: { value: "#ffffff" },
+        shape: { type: "circle" },
+        opacity: { value: 0.5 },
+        size: { value: 3, random: true },
+        line_linked: {
+          enable: true,
+          distance: 150,
+          color: "#ffffff",
+          opacity: 0.4,
+          width: 1,
+        },
+        move: {
+          enable: true,
+          speed: 2,
+          direction: "none",
+          out_mode: "out"
+        }
+      },
+      interactivity: {
+        events: {
+          onhover: { enable: true, mode: "repulse" },
+          onclick: { enable: true, mode: "push" },
+        },
+        modes: {
+          repulse: { distance: 100, duration: 0.4 },
+          push: { particles_nb: 4 },
+        }
+      },
+      retina_detect: true,
+    });
+  </script>
+</header>
 
 
       <!-- ** Main ** -->
@@ -230,7 +283,7 @@
 
          </section>
          <!-- ?? My Institute Section -->
-         <section class="my-6  py-6 mx-auto">
+         <section id="institute" class="my-6  py-6 mx-auto">
             <div class="flex mb-8 justify-center items-center space-x-2" data-aos="zoom-in-up "
                data-aos-delay="300"
                data-aos-duration="300">
@@ -653,7 +706,7 @@
 
          <!-- Gallery secton -->
          <!-- Gallery Section -->
-         <section class="bg-gradient-to-br from-indigo-100 to-indigo-200 py-10 px-4">
+         <section id="gallery" class="bg-gradient-to-br from-indigo-100 to-indigo-200 py-10 px-4">
             <h2 class="text-3xl font-bold text-center mb-10 text-purple-700">📸 My Gallery</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
                <!-- Gallery Cards -->
@@ -928,7 +981,7 @@
 
 <!-- My Blog Section -->
 
-<section class="pb-12 pt-20 bg-indigo-50">
+<section id="blogs" class="pb-12 pt-20 bg-indigo-50">
   <div class="max-w-6xl mx-auto px-4">
     <h2 class= " text-3xl md:text-3xl font-bold text-center mb-10 text-purple-700">🩺 My Blogs</h2>
 
